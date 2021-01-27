@@ -1,12 +1,11 @@
 from rest_framework import serializers
 from rest_framework.validators import UniqueTogetherValidator
 
-from .models import Post, Comment, Follow, User, Group
+from .models import Comment, Follow, Group, Post, User
 
 
 class GroupSerializer(serializers.ModelSerializer):
-    title = serializers.CharField()
-
+ 
     class Meta:
         fields = '__all__'
         model = Group
